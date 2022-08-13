@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JavaScript History API: pushState Demo</title>
+        <link id="modalimport" rel="import" href="/modal.html" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <div class="page">
+            <!-- Header -->
+            <header>
+                <div class="container">HEADER</div>
+            </header>
+
+            <!-- PageBody -->
+
+            <div class="container">
+                <!-- left Part of page -->
+                <nav class="menu">
+                    <ul>
+                        <li>
+                            <img src="img/menu/Inbox.png" alt="" />
+                            <a id="inbox" class="active" href="">Входящие</a>
+                        </li>
+
+                        <li>
+                            <img src="img/menu/Star.png" alt="" />
+                            <a id="today" href="">Сегодня</a>
+                        </li>
+                        <li>
+                            <img src="img/menu/Calendar.png" alt="" />
+                            <a id="thisWeek" href="">На этой неделе</a>
+                        </li>
+                        <li>
+                            <img src="img/menu/Layers.png" alt="" />
+                            <a id="someday" href="">Когда-нибудь</a>
+                        </li>
+                        <li>
+                            <img src="img/menu/Journal.png" alt="" />
+                            <a id="overdue" href="">Просроченные</a>
+                        </li>
+                        <li>
+                            <img src="img/menu/Journal.png" alt="" />
+                            <a id="deleted" href="">Завершенные</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Center part of page -->
+                <div class="todo">
+                    <!-- Todo header -->
+                    <div class="todo__header">
+                        <ul class="todo__header__menu">
+                            <!-- <li class="active" id="allTasks">
+                                <span>Все задачи</span>
+                            </li> -->
+                        </ul>
+                        <div class="todo__header__cross">
+                            <a href="">
+                                <div class="one"></div>
+                                <div class="two"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Todo tasklist -->
+                    <div class="todo__tasklist">
+                        <div class="todo__tasklist__box">
+                            <div>
+                                <input class="todo__tasklist__box_checkbox" type="checkbox" />
+                                <div>
+                                    <a href=""><h3>Название задачи</h3></a>
+
+                                    <a href="">Входящие</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a class="todo__tasklist__box_date" href="">21.02.2022</a>
+                                <a class="todo__tasklist__box_cross" href="">
+                                    <div></div>
+                                    <div></div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="todo__tasklist__box">
+                            <div>
+                                <input
+                                    class="todo__tasklist__box_checkbox"
+                                    type="checkbox"
+                                    сhecked
+                                />
+                                <div>
+                                    <a href=""><h3>Название задачи</h3></a>
+
+                                    <a href="">Входящие</a>
+                                </div>
+                            </div>
+                            <div>
+                                <a class="todo__tasklist__box_date" href="">21.02.2022</a>
+                                <a class="todo__tasklist__box_cross" href="">
+                                    <div></div>
+                                    <div></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add new todo -->
+                    <div class="todo__taskAdder">
+                        <input class="" id="addTaskInput" type="text" />
+                        <button id="addTaskBtn">Добавить задачу</button>
+                    </div>
+                </div>
+
+                <!-- Right part of page (hidden) task info -->
+                <div class="task_info">1213</div>
+            </div>
+        </div>
+
+        <!-- MODAL -->
+        <div class="modal" id="modal">
+            <div class="modal__inner">
+                <input id="addNewListInput" class="modal__inner_input" type="text" />
+                <button class="modal__inner_button">Добавить</button>
+
+                <a class="modal__inner_cross">
+                    <div></div>
+                    <div></div>
+                </a>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
